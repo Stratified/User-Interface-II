@@ -1,1 +1,12 @@
 /* Add CSS styling here */
+
+nav {
+display: flex;
+flex-direction: row-reverse;
+}
+
+a {
+  border: 2px solid black;
+  text-decoration: none;
+  color: black;
+}
