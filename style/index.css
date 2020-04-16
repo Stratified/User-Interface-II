@@ -144,7 +144,7 @@ nav {
 
 .navTitle {
   margin: 1%;
-  font-size: 45px;
+  font-size: 3rem;
 }
 
 a {
@@ -168,7 +168,7 @@ a {
 }
 
 .imgText h1 {
-  font-size: 45px;
+  font-size: 3rem;
 }
 
 h3 {
@@ -202,20 +202,33 @@ a:hover {
 
 .column div h4 {
   text-align: center;
-  margin: 10px;
+  margin: 0.2rem;
   padding: 0% 0% 5% 0%;
 }
 
 .column div img {
-  width: 400px;
+  width: 40rem;
 }
 
 footer {
   text-align: center;
   background-color: lightgray;
   padding: 2%;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 footer a {
   background-color: white;
+}
+
+@media (max-width: 800px) {
+
+  .column div img {
+    width: 15rem;
+    display: flex;
+    justify-content: space-between;
+  }
 }
