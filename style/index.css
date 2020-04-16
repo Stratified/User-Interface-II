@@ -135,23 +135,55 @@ table {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+body {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+
+.nav {
+  margin: 2vh;
+}
+
 nav {
   display: flex;
-  flex-direction: row;
   justify-content: flex-end;
-  margin-top: -3%;
+  color: white;
+  background: rgb(0, 1, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 1, 36, 1) 0%,
+    rgba(65, 9, 121, 1) 35%,
+    rgba(0, 116, 255, 1) 100%
+  );
+}
+
+.navItems {
+  margin-right: 1%;
+  display: flex;
+  align-items: center;
 }
 
 .navTitle {
-  margin: 1%;
   font-size: 3rem;
+  margin-right: 75%;
 }
 
-a {
+nav a,
+footer a {
   border: 2px solid black;
   text-decoration: none;
   color: black;
-  padding: 10px;
+  padding: 0.7%;
+}
+
+.imgText a {
+  text-decoration: none;
+  font-style: normal;
+  text-shadow: none;
 }
 
 .imgTitle {
@@ -160,7 +192,10 @@ a {
 }
 
 .imgText {
+  font-style: italic;
   color: black;
+  font-weight: bold;
+  text-shadow: darkgrey 2px 2px 2px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -212,23 +247,59 @@ a:hover {
 
 footer {
   text-align: center;
-  background-color: lightgray;
+  background-color: darkslateblue;
   padding: 2%;
-  position: relative;
-  left: 0;
   bottom: 0;
-  width: 100%;
 }
 
 footer a {
   background-color: white;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1366px) {
+  .column div img {
+    width: 20rem;
+    display: flex;
+    justify-content: space-between;
+  }
 
+  .navTitle {
+    margin-right: 60%;
+  }
+}
+
+@media (max-width: 800px) {
   .column div img {
     width: 15rem;
     display: flex;
     justify-content: space-between;
+  }
+
+  .banner {
+    width: 80%;
+  }
+
+  .navTitle {
+    margin-right: 30%;
+  }
+}
+
+@media (max-width: 500px) {
+  .gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner {
+    width: 80%;
+  }
+
+  .navTitle {
+    margin-right: 10%;
+  }
+
+  .navItems {
+    font-size: 1.2rem;
   }
 }
